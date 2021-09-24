@@ -6,4 +6,10 @@ class User < ApplicationRecord
                     birth_date: birth_date.strftime('%d/%m/%Y')
                   })
   end
+
+  def age
+    year = birth_date.year
+    current_year = Time.new
+    current_year.year - year
+  end
 end

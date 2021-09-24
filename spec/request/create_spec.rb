@@ -43,7 +43,7 @@ describe UserController, type: :request do
           expect(User.count).to eq 1
         end
 
-        xit 'must return a age' do
+        it 'must return a age' do
           call
           result = JSON.parse(response.body)['data']
           expect(result['age']).to eq '30'
