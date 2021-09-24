@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::UserController, type: :request do
+describe UserController, type: :request do
 
   context 'when show all users' do
     context 'when use a get request' do

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Api::V1::UserController, type: :request do
+describe UserController, type: :request do
 
   let(:valid_params) do
     {
