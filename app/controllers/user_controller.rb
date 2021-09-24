@@ -10,11 +10,7 @@ class UserController < ApplicationController
       u.save
     end
 
-    binding.pry
 
-    # result.birth_date = Date.strfy(user[:birth_date])
-
-    binding.pry
     render :json => { data: result.as_json }, :status => 201
   end
 end
