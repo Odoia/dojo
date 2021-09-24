@@ -4,9 +4,9 @@ class UserController < ApplicationController
     user = params[:user]
     
     result = User.new.tap do |u|
+      u.birth_date = DateTime.parse(user[:birth_date]).strftime('%d/%m/%Y')
       u.name = user[:name]
       u.city = user[:city]
-      u.birth_date = user[:birth_date]
       u.save
     end
 
