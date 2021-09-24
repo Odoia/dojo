@@ -7,9 +7,9 @@ class User < ApplicationRecord
                   })
   end
 
-  def age
-    year = birth_date.year
-    current_year = Time.new
-    current_year.year - year
-  end
+  #def age
+  #  year = birth_date.year
+  #  current_year = Time.new
+  #  current_year.year - year
+  #end
 end
