@@ -1,6 +1,7 @@
 class UserController < ApplicationController
 
   def create
+    return error unless params[:user].present?
     user = params[:user]
 
     result = User.new.tap do |u|
@@ -10,7 +11,11 @@ class UserController < ApplicationController
       u.save
     end
 
-
     render :json => { data: result.as_json }, :status => 201
   end
+
+  def error
+    render :status => 400
+  end
+
 end

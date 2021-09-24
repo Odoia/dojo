@@ -52,7 +52,7 @@ describe UserController, type: :request do
 
       context 'when pass invalid params' do
         let(:params) { invalid_params }
-        xit 'must return 400' do
+        it 'must return 400' do
           call
           expect(response.status).to eq 400
         end
