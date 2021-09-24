@@ -29,7 +29,7 @@ describe Api::V1::UserController, type: :request do
           expect(response.status).to eq 201
         end
 
-        xit 'must return a created user' do
+        it 'must return a created user' do
           call
           result = JSON.parse(response.body)['data']
           expect(result['id']).to eq 1
