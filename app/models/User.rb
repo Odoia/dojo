@@ -3,11 +3,12 @@
 class User < ApplicationRecord
   def as_json
     super().merge({
-                    birth_date: birth_date.strftime('%d/%m/%Y')
+                    birth_date: birth_date.strftime('%d/%m/%Y'),
+                    age: age
                   })
   end
 
   def age
-    ((date_to - date_from) / 365).floor
+    ((Date.today - birth_date) / 365).floor.to_s
   end
 end

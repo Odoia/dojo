@@ -10,11 +10,6 @@ class UserController < ApplicationController
       u.save
     end
 
-    binding.pry
-    def age
-      
-    end
-
 
     render :json => { data: result.as_json }, :status => 201
   end
