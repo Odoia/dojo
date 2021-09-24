@@ -12,7 +12,7 @@ class UserController < ApplicationController
 
     binding.pry
 
-    result_as_json = JSON.parse(result)
+    # result.birth_date = Date.strfy(user[:birth_date])
 
     binding.pry
     render :json => { data: result.as_json }, :status => 201
