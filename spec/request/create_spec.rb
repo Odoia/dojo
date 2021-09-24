@@ -38,7 +38,7 @@ describe Api::V1::UserController, type: :request do
           expect(result['birth_date']).to eq '10/10/1991'
         end
 
-        xit 'must user count in database is 1' do
+        it 'must user count in database is 1' do
           call
           expect(User.count).to eq 1
         end
