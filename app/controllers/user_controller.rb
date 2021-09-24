@@ -2,7 +2,6 @@ class UserController < ApplicationController
 
   def create
 
-    
-    render status: 201
+    render :json => {data: {} }
   end
 end
